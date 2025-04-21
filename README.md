@@ -1,0 +1,2 @@
+# linux
+ linux実習
