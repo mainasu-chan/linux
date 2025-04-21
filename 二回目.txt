@@ -1,0 +1,4 @@
+mkdir work
+cd work
+/home/g023c0000/work
+cd ~
