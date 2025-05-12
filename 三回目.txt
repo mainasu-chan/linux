@@ -1,0 +1,34 @@
+問1
+①^a.*b$②[abc]$
+
+問2
+①
+kenji okada 70
+toru miyahara  100
+yoshiharu kawai 85
+②
+yoshiharu kawai 85
+toru miyahara 100
+kenji okada 70
+③
+yohisharu kawai 85
+toru miyahara 100
+kenji okada 70
+④
+toru miyahara 100
+kenji okada 70
+yoshiharu kawai 85
+⑤
+kenji okada 70
+yoshiharu kawai 85
+toru miyahara 100
+
+問3
+aaa
+bbb
+ccc
+ccc
+DDD
+
+問4
+sort -k 5 -n -r root.txt | head -n 1
