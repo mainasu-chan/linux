@@ -1,0 +1,13 @@
+1
+hogeというディレクトリを作成
+2
+sample.cに対してsample.hlnkというハードリンクを作成
+3
+sample.cに対してsample.slnkというシンボリックリンクを作成
+4
+sample.c 60
+sampple.hlnk 60
+sample.slnk 8
+5
+sample.hlnk 60
+sample.slnk 8
