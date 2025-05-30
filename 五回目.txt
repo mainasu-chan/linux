@@ -1,0 +1,32 @@
+問一
+./BBB.sh: 行 3: ddd: コマンドが見つかりません
+456
+
+問二
+eeeのみをexportし、CCC.shにてdddとeeeをechoしようとしているがeeeのみexportされているため、dddは見つからない判定になったから
+
+問三
+#!/bin/bash
+
+echo ----before sorting----
+cat score.txt
+echo ----after sorting----
+sort -k 3 -n -r score.txt
+
+問四
+value abc is $abc
+value abc is xyz
+2025年 5月 30日 金曜日 11:17:57 JST
+
+問五
+$1: aaa
+$2: bbb
+$0: ./args.sh
+$#: 2
+
+問六
+$1: aaa
+$2: bbb
+$3: ccc
+$1: bbb
+$2: ccc
