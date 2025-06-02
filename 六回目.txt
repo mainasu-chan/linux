@@ -1,0 +1,61 @@
+問一
+#!/bin/bash
+
+read -p "input a or b > " input
+
+if [ "$input" = "a" ]; then
+  echo "You are A-RANK"
+elif [ "$input" = "b" ]; then
+  echo "You are B-RANK"
+else
+  echo "You are No-RANK"
+fi
+
+問二
+#!/bin/bash
+
+echo 'SELECT1'
+echo 'SELECT2'
+echo 'SELECT3'
+read -p "input number>" input
+
+case input in
+        1)
+                echo "SELECT1"
+                ;;
+        2)
+                echo "SELECT2"
+                ;;
+        3)
+                echo "SELECT3"
+                ;;
+esac
+
+問三
+#!/bin/bash
+
+read -p "1つ目のデータ: " data1
+read -p "2つ目のデータ: " data2
+read -p "3つ目のデータ: " data3
+
+max=$data1
+min=$data1
+
+if [ "$data2" -gt "$max" ]; then
+  max=$data2
+else
+  if [ "$data3" -gt "$max" ]; then
+    max=$data3
+  fi
+fi
+
+if [ "$data2" -lt "$min" ]; then
+  min=$data2
+else
+  if [ "$data3" -lt "$min" ]; then
+    min=$data3
+  fi
+fi
+
+echo "最大値: $max"
+echo "最小値: $min"
