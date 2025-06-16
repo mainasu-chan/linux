@@ -27,8 +27,7 @@ $ps ax | grep ps-sample
 1796 tty2   S+  0:00 sh ./ps-sample.sh
 1857 tty3   S+  0:00 grep --color=auto ps-sample
 
-tty1で最初に実行したps-sample.shと二つ目に起動したps-sample.shがtty2で、tty3ではps-sampleをgrepで検索したものをps axで表している
-
+tty1で最初に実行したps-sample.shと二つ目に起動したps-sample.shがtty2で、tty3ではps-sampleをgrepで検索したものをps axで表している、同じシェルスクリプトだが実行している端末が違うのでこういった結果になる
 問七
 $ps ax | grep ps-sample
 1796 tty2   S+  0:00 sh ./ps-sample.sh
