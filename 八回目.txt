@@ -1,0 +1,38 @@
+問一
+$kill %1
+[1]+ Stopped    man cat
+
+$ps
+PID TTY     TIME CMD
+1384 tty1   00:00:00 bash
+1425 tty1   00:00:00 ps
+[1]+ Terminated     man cat
+
+man、preconv、nroff、pager、localeのプロセスが停止した
+
+問二
+5秒ごとにcountを1増やして5回count--> $cntとして出力している
+
+問三
+kill %1
+[1]+ Stopped    sleep 10
+
+問四
+
+問五
+
+問六
+$ps ax | grep ps-sample
+1726 tty1   S+  0:00 /bin/bash ./ps-sample.sh
+1796 tty2   S+  0:00 sh ./ps-sample.sh
+1857 tty3   S+  0:00 grep --color=auto ps-sample
+
+tty1で最初に実行したps-sample.shと二つ目に起動したps-sample.shがtty2で、tty3ではps-sampleをgrepで検索したものをps axで表している
+
+問七
+$ps ax | grep ps-sample
+1796 tty2   S+  0:00 sh ./ps-sample.sh
+1857 tty3   S+  0:00 grep --color=auto ps-sample
+
+$kill 1796
+
