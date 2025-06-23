@@ -1,0 +1,123 @@
+問一
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx 	20 May 12 06:42 uniw-sample.txt
+-rw------- 1 gxxxcxxxx gxxxcxxxx      7374 jun 23 05:24 .viminfo
+
+問二
+[05:34:51 gxxxcxxxx]$
+
+問三
+$ls -l /usr/bin > ls-usr-bin.txt
+$ls -l ls*
+-rwr-xr-x 1 gxxxcxxxx gxxxcxxxx  21 May 19 07:21 lsdate.sh
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  82526 May 23 06:42 ls-usr-bin.txt
+$gzip ls-usr-bin.txt
+$ls -l ls*
+-rwr-xr-x 1 gxxxcxxxx gxxxcxxxx  21 May 19 07:21 lsdate.sh
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  14251 May 23 06:42 ls-usr-bin.txt.gz
+$gzip -d ls-usr-bin.txt.gz
+$ls -l ls*
+-rwr-xr-x 1 gxxxcxxxx gxxxcxxxx  21 May 19 07:21 lsdate.sh
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  82526 May 23 06:42 ls-usr-bin.txt
+
+問四
+$mkdir zip_test
+$cd zip_test
+$man gzip > gzip_man
+$man find > find_man
+$ls -l
+total 104
+-rw-rw-rr-- 1 gxxxcxxxx gxxxcxxxx  83462 jun 23 05:42 find_man
+-rw-rw-rr-- 1 gxxxcxxxx gxxxcxxxx  18134 jun 23 05:42 gzip_man  
+
+$cd ..
+$gzip -r zip_test
+$ls -l zip*
+total 36
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  24659 jun 23 05:42 find_man.gz
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  6472 jun 23 05:42 gzip_man.gz
+
+$gunzip -r zip_test
+$ls -l zip*
+total 104
+-rw-rw-rr-- 1 gxxxcxxxx gxxxcxxxx  83462 jun 23 05:42 find_man
+-rw-rw-rr-- 1 gxxxcxxxx gxxxcxxxx  18134 jun 23 05:42 gzip_man
+
+問五
+$ls -l /usr/bin > ls-usr-bin.txt
+$ls -l ls*
+-rwr-xr-x 1 gxxxcxxxx gxxxcxxxx  21 May 19 07:21 lsdate.sh
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  82526 May 23 06:42 ls-usr-bin.txt
+
+$bzip2 ls-usr-bin.txt
+$ls -l ls*
+-rwr-xr-x 1 gxxxcxxxx gxxxcxxxx  21 May 19 07:21 lsdate.sh
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  11180 May 23 06:42 ls-usr-bin.txt.bz2
+
+$bzip2 -d ls-usr-bin.txt.bz2
+$ls -l ls*
+-rwr-xr-x 1 gxxxcxxxx gxxxcxxxx  21 May 19 07:21 lsdate.sh
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  82526 May 23 06:42 ls-usr-bin.txt
+
+問六
+$cd zip_test
+$ls -l
+total 104
+-rw-rw-rr-- 1 gxxxcxxxx gxxxcxxxx  83462 jun 23 05:42 find_man
+-rw-rw-rr-- 1 gxxxcxxxx gxxxcxxxx  18134 jun 23 05:42 gzip_man
+
+$bunzip2 -z gzip_man find_man
+$ls -l
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  21331 jun 23 05:42 find_man.bz2
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  5953 jun 23 05:42 gzip_man.bz2
+
+$bunzip2 gzip_man.bz2 find_man.bz2
+$ls -l
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  83462 jun 23 05:42 find_man
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  18134 jun 23 05:42 gzip_man
+
+$cd ..
+
+問七
+$tar cvf test.tar tar_man passwd_man
+passwd_man
+$tar tf test.tar
+tar_man
+passwd_man
+
+$tar cvfz test.tar.gz tar_man passwd_man
+tar_man
+passwd_man
+$tar tf test.tar.gz
+tar_man
+passwd_man
+
+$tar cvfj test.tar.bz2 tar_man passwd_man
+tar_man
+passwd_man
+$tar tf test.tar.bz2
+tar_man
+passwd_man
+
+$ls -l
+total 132
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  2752 jun 23 05:42 passwd_man
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  44940 jun 23 05:42 tar_man
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  51200 jun 23 05:42 test.tar
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  12833 jun 23 05:42 test.tar.bz2
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  14279 jun 23 05:42 test.tar.gz
+$rm *man
+$ls -l
+total 84
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  51200 jun 23 05:42 test.tar
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  12833 jun 23 05:42 test.tar.bz2
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  14279 jun 23 05:42 test.tar.gz
+$tar xvf test.tar.bz2
+tar_man
+passwd_man
+$ls -l
+total 132
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  2752 jun 23 05:42 passwd_man
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  44940 jun 23 05:42 tar_man
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  51200 jun 23 05:42 test.tar
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  12833 jun 23 05:42 test.tar.bz2
+-rw-rw-r-- 1 gxxxcxxxx gxxxcxxxx  14279 jun 23 05:42 test.tar.gz
