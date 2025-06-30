@@ -1,0 +1,40 @@
+問一
+The /etc/hostname file configure the name of the local system.unless overridden as
+問二
+③#grep penguin /etc/passwd
+penugin:x:1001:100::/home/penguin:/bin/bash
+④#grep 1001 /etc/passwd
+penguin:x:1001:100::/home/penguin:/bin/bash
+
+問三
+①$sudo passwd penguin
+③gxxxcxxxxus login: penguin
+Password:
+④ls /home
+
+問四
+①#grep penguin /etc/passwd
+penguin:x:1001:100::/home/penguin:/bin/bash
+③#grep penguin /etc/passwd
+penguin:x:1001:100:Linux Command Test:/home/penguin:/bin/bash
+
+100:と:/home/penguinの間にLinux Command Testが表示された
+
+問五
+②grep penguin /etc/passwd
+③ls /home
+
+問六
+#grep lpic /etc/group
+lpic:x:1001:
+
+問七
+①$grep lpic /etc/group
+lpic:x:1001:
+③#grep linux /etc/group
+linux:x:1002:
+
+問八
+①#grep linux /etc/group
+linux:x:1001:
+③grep linux /etc/group
