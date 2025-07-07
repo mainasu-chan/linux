@@ -1,0 +1,92 @@
+問一
+-rw-rw-r-- 1 gxxxgxxxx gxxxgxxxx 0 jul  7 11:32 user
+
+chown: changing ownership of 'user': Operation not permitted
+
+-rw-rw-r-- 1 nobody gxxxgxxxx 0 jul  7 11:32 user
+
+所有者がnobodyに変更された
+
+問二
+-rw-rw-r-- 1 gxxxgxxxx gxxxgxxxx 0 jul  7 11:32 groups
+
+chgrp: changing group of 'groups': Operation not permitted
+
+-rw-rw-r-- 1 gxxxgxxxx nogroup 0 jul  7 11:32 groups
+
+所属しているグループがnogroupに変更された
+
+問三
+$mkdir dir1
+$mkdir dir1/dir2
+$touch dir1/fil1
+$touch dir1/fil2
+$su
+#chmod root dir1/dir2
+#chgrp nogroup dir1/dir2
+#chmod root dir1/file*
+#chgrp nogroup dir1/file*
+#ls -l dir1
+drwxrwxr-x 2 root nogroup 4096 jul  7 11:32 dir2
+-rw-r--r-- 1 root nogroup 0 jul  7 11:32 fil1
+-rw-r--r-- 1 root nogroup 0 jul  7 11:32 fil2
+#exit
+
+問四
+./work/test01.dat
+./work/test02.dat
+./work/test03.dat
+
+./work/test01.dat
+./work/test02.dat
+./work/test03.dat
+
+find: path must precede expression: `error.txt'`
+find: possible unquoted pattern after predicate `-name'?
+
+find: path must precede expression: `cat-out.txt'
+find: possible unquoted pattern after predicate `-name'?
+
+問五
+$find ./work -atime 0
+./work
+./work/test01.dat
+./work/sample.txt
+
+$find ./work -atime -1
+./work
+./work/test01.dat
+./work/sample.txt
+
+$find ./work -atime -2
+./work
+./work/test01.dat
+./work/sample.txt
+
+$find ./work -atime -3
+./work
+./work/test01.dat
+./work/test02.dat
+./work/sample.txt
+
+$find ./work -atime +1
+./work/test03.dat
+./work/test02.dat
+
+$find ./work -atime +2
+./work/test03.dat
+
+問六
+$find ./work -mtime 0
+./work
+./work/test01.dat
+./work/sample.txt
+
+$find ./work -mtime -10
+./work
+./work/test01.dat
+./work/test02.dat
+./work/sample.txt
+
+$find ./work -mtime +10
+./work/test03.dat
