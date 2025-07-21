@@ -1,0 +1,143 @@
+問一
+2484441
+2484446
+
+問二
+2733166 gxxxcxxxx    20   0   18.1g  14.5g 143516 S  20.5  23.9     38,06 gnome-s+
+   6461 gxxxcxxxx    20   0  589192 160024  87300 S  18.2   0.3     79,47 Xorg
+   6892 gxxxcxxxx    20   0 6776652 214372 100516 S  12.6   0.3     33,06 gnome-s+
+
+問三
+gxxxcxxxx   pts/3        192.168.3.2      Mon Jul 21 13:43:55 2025   still logged in
+gxxxcxxxx   pts/2        192.168.3.2      Mon Jul 21 13:40:31 2025   still logged in
+gxxxcxxxx   pts/1        192.168.3.2      Mon Jul 21 13:38:30 2025   still logged in
+gxxxcxxxx   pts/1        192.168.3.2      Mon Jul 21 13:32:43 2025 - Mon Jul 21 13:34:10 2025  (00:01)
+
+wtmp begins Thu Jan  9 03:11:07 2025
+
+問四
+①
+ 13:46:53 up 42 days, 19:12,  5 users,  load average: 0.57, 0.65, 0.65
+➁
+2025-06-08 18:34:07
+
+問五
+Linux gxxxcxxxx-System-Product-Name 6.8.0-51-generic #52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+問六
+①
+$ wc -l -w -c ls-usr-bin.txt
+  2390  22353 156599 ls-usr-bin.txt
+➁
+$find /usr/bin | wc -l
+2390
+
+問七
+$ cut -d ',' -f 1,3 tokuten.csv
+80,80
+87,100
+100,100
+87,93
+100,77
+
+問八
+$ cat tr-test.txt | tr ABC abc
+abcGEFG
+
+GFEDcba
+
+問九
+$ diff a.c b.c
+3c3
+<     printf("Linux Command Test!\n");
+---
+>     printf("diff Command Test!\n");
+
+この行に異なる部分があるということを示している
+
+問十
+--- a.c 2025-07-21 14:00:35.461249469 +0900
++++ b.c 2025-07-21 14:00:49.502347704 +0900
+@@ -1,4 +1,4 @@
+ #include <stdio.h>
+ void main() {
+-    printf("Linux Command Test!\n");
++    printf("diff Command Test!\n");
+ }
+
+問十一
+#include <stdio.h>
+void main() {
+    printf("diff Command Test!\n");
+}問一
+2484441
+2484446
+
+問二
+2733166 gxxxcxxxx    20   0   18.1g  14.5g 143516 S  20.5  23.9     38,06 gnome-s+
+   6461 gxxxcxxxx    20   0  589192 160024  87300 S  18.2   0.3     79,47 Xorg
+   6892 gxxxcxxxx    20   0 6776652 214372 100516 S  12.6   0.3     33,06 gnome-s+
+
+問三
+gxxxcxxxx   pts/3        192.168.3.2      Mon Jul 21 13:43:55 2025   still logged in
+gxxxcxxxx   pts/2        192.168.3.2      Mon Jul 21 13:40:31 2025   still logged in
+gxxxcxxxx   pts/1        192.168.3.2      Mon Jul 21 13:38:30 2025   still logged in
+gxxxcxxxx   pts/1        192.168.3.2      Mon Jul 21 13:32:43 2025 - Mon Jul 21 13:34:10 2025  (00:01)
+
+wtmp begins Thu Jan  9 03:11:07 2025
+
+問四
+①
+ 13:46:53 up 42 days, 19:12,  5 users,  load average: 0.57, 0.65, 0.65
+➁
+2025-06-08 18:34:07
+
+問五
+Linux gxxxcxxxx-System-Product-Name 6.8.0-51-generic #52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+問六
+①
+$ wc -l -w -c ls-usr-bin.txt
+  2390  22353 156599 ls-usr-bin.txt
+➁
+$find /usr/bin | wc -l
+2390
+
+問七
+$ cut -d ',' -f 1,3 tokuten.csv
+80,80
+87,100
+100,100
+87,93
+100,77
+
+問八
+$ cat tr-test.txt | tr ABC abc
+abcGEFG
+
+GFEDcba
+
+問九
+$ diff a.c b.c
+3c3
+<     printf("Linux Command Test!\n");
+---
+>     printf("diff Command Test!\n");
+
+この行に異なる部分があるということを示している
+
+問十
+--- a.c 2025-07-21 14:00:35.461249469 +0900
++++ b.c 2025-07-21 14:00:49.502347704 +0900
+@@ -1,4 +1,4 @@
+ #include <stdio.h>
+ void main() {
+-    printf("Linux Command Test!\n");
++    printf("diff Command Test!\n");
+ }
+
+問十一
+#include <stdio.h>
+void main() {
+    printf("diff Command Test!\n");
+}
