@@ -18,17 +18,17 @@ Mem:           15611          242        14531      2      837               150
 Swap:           0            0           0
 Total:           15611      242         14531
 
-問三
-①
+④
 0   0       0   14880140    36972   820372  0   0   0   0   242 106 0   0   100 0   0
 0   0       0   14880140    36972   820372  0   0   0   0   218 97  0   0   100 0   0
+問三
 
-②
+①
 procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
  0  0      0 14880140 36972 820372   0    0     0     0  242 106  0  0 100  0  0
 
-③
+➁
 procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
  0  0      0 14880140 36972 820372   0    0     69     43  55 44  0  0 99  0  0
